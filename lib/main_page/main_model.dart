@@ -111,6 +111,8 @@ class MainModel extends ChangeNotifier {
     if (memoList.isNotEmpty) {
       memoList[currentMemoIndex].text = editingController.text;
       viewText = editingController.text;
+          
+      memoList[currentMemoIndex].edited();
 
       updateDatabase();
       notifyListeners();
