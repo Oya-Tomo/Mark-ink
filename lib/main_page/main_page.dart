@@ -280,8 +280,10 @@ class MainPage extends StatelessWidget {
               ConstrainedBox(
                 constraints: const BoxConstraints.expand(width: 100.0, height: 100.0),
                 child: memoEmpty
-                ? MarkdownBody(
-                  data: viewText,
+                ? SingleChildScrollView(
+                  child: MarkdownBody(
+                    data: viewText,
+                  ),
                 )
                 : const Center(
                   child: Text("open the memo and write Markdown here."),
@@ -308,5 +310,4 @@ class MainPage extends StatelessWidget {
       ),
     );
   }
-
 }
